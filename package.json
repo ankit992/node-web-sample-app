@@ -1,0 +1,22 @@
+{
+  "name": "node-web-sample-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankit992/node-web-sample-app.git"
+  },
+  "author": "Ankit Arora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankit992/node-web-sample-app/issues"
+  },
+  "homepage": "https://github.com/ankit992/node-web-sample-app#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
