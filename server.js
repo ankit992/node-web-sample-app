@@ -1,7 +1,9 @@
 const express = require('express');
+const hbs = require('hbs');
 
 var app = express();
 
+app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/',(req, res) => {
@@ -13,7 +15,11 @@ app.get('/',(req, res) => {
 });
 
 app.get('/about',(req, res) => {
-    res.send('About page');
+    // res.send('About page');
+    res.render('about',{
+        pageTitle: 'About Page',
+        currentYear: new Date().getFullYear()
+    });
 });
 
 app.get('/bad', (req, res) => {
@@ -21,4 +27,6 @@ app.get('/bad', (req, res) => {
         errorMessage: 'This is an error message'
     });
 });
-app.listen(3000);
+app.listen(3000, () => {
+    console.log('Server is up on port 3000');
+});
